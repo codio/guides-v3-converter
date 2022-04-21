@@ -15,7 +15,6 @@ jobs:
         with:
           node-version: '12'
           cache: 'npm'
-          cache-dependency-path: '**/npm-shrinkwrap.json'
       - run: npm install
 
       - name: echo nodejs information
