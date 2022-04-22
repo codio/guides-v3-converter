@@ -5,7 +5,7 @@ const write = (file, data) => {
   return fs.promises.writeFile(file, data);
 };
 
-const createFolder = (path) => fs.promises.stat(path)
+export const createFolder = (path) => fs.promises.stat(path)
   .catch(() => {
     console.log(`Creating "${path}" Folder...`);
     return fs.promises.mkdir(path);

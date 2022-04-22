@@ -9,7 +9,7 @@ const path = process.env.CODIO_PROJECT_PATH || DEFAULT_PATH;
 
 oldGuides.loadAssessments(path).then((jsonStructure) => {
   console.log('Saving assessments...');
-  return newGuides.saveAssessments(jsonStructure, path);
+  return newGuides.saveAssessments(path, jsonStructure);
 })
   .then(() => oldGuides.cleanup(path))
   .then(() => {
